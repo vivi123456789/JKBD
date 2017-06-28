@@ -37,6 +37,7 @@
             android:layout_weight="1"
             android:drawableTop="@mipmap/main_menu_message"
             android:text="设置"
+            android:onClick="set"
             android:background="@null"/>
         <Button
             android:layout_width="wrap_content"
