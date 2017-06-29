@@ -18,17 +18,7 @@ public class SplashActivity extends AppCompatActivity {
         setTheme(R.style.Theme_AppCompat_Light_NoActionBar);
         mCountDownTimer.start();
     }
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        switch (requestCode) {
-            case 1:
-                if (resultCode == RESULT_OK) {
-                    finish();
-                }
-                break;
-            default:
-        }
-    }
+
     CountDownTimer mCountDownTimer=new CountDownTimer(2000,1000) {
         @Override
         public void onTick(long millisUntilFinished) {
@@ -39,6 +29,7 @@ public class SplashActivity extends AppCompatActivity {
         public void onFinish() {
             Intent intent=new Intent(SplashActivity.this,MainActivity.class);
             startActivity(intent);
+            finish();
         }
     };
 }
